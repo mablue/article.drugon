@@ -51,3 +51,56 @@ The real and imaginary components are concatenated into a **2048-dimensional** r
 
 ```bash
 pip install rdkit lightgbm scikit-learn numpy pandas
+```
+
+Quick Start
+
+```python
+from drugon import Drugon
+
+# Train on your own data
+model = Drugon()
+model.fit(smiles_list, pic50_values)
+
+# Predict
+predictions = model.predict(new_smiles_list)
+```
+
+Reproducing the Results
+
+```bash
+# Download ChEMBL data
+wget https://raw.githubusercontent.com/PatWalters/datafiles/main/CHEMBL4550.smi
+
+# Run benchmark
+python benchmark.py
+```
+
+Expected output:
+
+```
+Drugon             r = +0.749  rho = +0.753  rmse = 0.613
+Binary Morgan      r = +0.723  rho = +0.729  rmse = 0.639
+```
+
+Files
+
+File Description
+drugon.py Production implementation
+benchmark.py Cross-target evaluation
+paper.md Preprint
+data/ ChEMBL downloads
+
+Citation
+
+```bibtex
+@article{drugon2026,
+  title={Drugon: Phase-Encoded Morgan Fingerprints Match Pretrained Chemical Transformers in Low-Data Affinity Prediction},
+  author={...},
+  year={2026}
+}
+```
+
+License
+
+MIT — see LICENSE.
