@@ -1,6 +1,6 @@
 ---
 title: "Drugon: Phase-Encoded Morgan Fingerprints Match Pretrained Chemical Transformers in Low-Data Affinity Prediction"
-author: "(Your Name)"
+author: "Masoud Azizi"
 date: "2026"
 abstract: |
   Pretrained chemical language models such as ChemBERTa and MoLFormer
